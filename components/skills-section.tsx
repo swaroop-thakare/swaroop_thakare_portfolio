@@ -168,7 +168,7 @@ export function SkillsSection() {
                 transition: { duration: 0.3 },
               }}
             >
-              <div className="relative rounded-lg border border-cyan-500/30 bg-black/50 backdrop-blur-sm overflow-hidden h-full">
+              <div className="relative rounded-lg border border-cyan-500/30 bg-gray-900/50 backdrop-blur-sm overflow-hidden h-full">
                 <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-black/10"></div>
 
@@ -259,9 +259,7 @@ export function SkillsSection() {
                 scale: 1.05,
                 boxShadow: "0 0 8px rgba(0, 255, 255, 0.5)",
               }}
-              className="px-3 py-2 rounded-md bg-black/50 border border-cyan-500/30 text-gray-300 flex items-center gap-2 group hover:bg-cyan-950/20 hover:border-cyan-400/50 transition-all duration-300"
-            >
-              <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors">{skill.icon}</span>
+              className="text-cyan-400 group-hover:text-cyan-300 transition-colors">{skill.icon}</span>
               <span className="text-sm">{skill.name}</span>
             </motion.div>
           ))}

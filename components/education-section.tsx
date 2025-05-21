@@ -38,7 +38,9 @@ export function EducationSection() {
             className="relative group"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="bg-black/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-6 transition-all duration-300 group-hover:border-cyan-400/50 group-hover:shadow-glow-sm">
+            // Replace bg-black with bg-gray-900
+            // Replace bg-black with bg-gray-900
+            <div className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-6 transition-all duration-300 group-hover:border-cyan-400/50 group-hover:shadow-glow-sm">
               <div className="absolute inset-0 bg-grid-pattern opacity-10 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-lg"></div>
 

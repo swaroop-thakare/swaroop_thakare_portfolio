@@ -106,7 +106,8 @@ export function HeroSection() {
 
                   <Button
                     variant="ghost"
-                    className="relative group px-6 py-2 overflow-hidden border border-purple-500/50 bg-black/30 hover:bg-purple-950/20"
+                    // Replace bg-black with bg-gray-900
+                    className="relative group px-6 py-2 overflow-hidden border border-purple-500/50 bg-gray-900/30 hover:bg-purple-950/20"
                     onClick={() => window.open('/aiml.pdf', '_blank')}
                   >
                     <span className="relative z-10 flex items-center gap-2 text-purple-400 group-hover:text-purple-300">

@@ -31,7 +31,9 @@ export function ThemeToggle() {
         onClick={toggleTheme}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative bg-black/50 border border-cyan-500/50 text-cyan-500 hover:bg-cyan-950/30 hover:text-cyan-400"
+        // Replace bg-black with bg-gray-900
+        className="relative bg-gray-900/50 border border-cyan-500/50 text-cyan-500 hover:bg-cyan-950/30 hover:text-cyan-400"
+        className="absolute right-0 top-full mt-2 bg-gray-900/60 text-cyan-400 text-xs py-1 px-2 rounded border border-cyan-500/30 whitespace-nowrap"
       >
         {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
 

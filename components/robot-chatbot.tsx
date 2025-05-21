@@ -107,7 +107,8 @@ export function RobotChatbot({ isOpen, onClose }: RobotChatbotProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
-        className="fixed bottom-24 right-8 z-50 w-80 sm:w-96 h-[500px] bg-black border border-cyan-500 rounded-lg shadow-lg shadow-cyan-500/20 flex flex-col overflow-hidden"
+        // Replace bg-black with bg-gray-900
+        className="fixed bottom-24 right-8 z-50 w-80 sm:w-96 h-[500px] bg-gray-900 border border-cyan-500 rounded-lg shadow-lg shadow-cyan-500/20 flex flex-col overflow-hidden"
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-cyan-800 bg-gradient-to-r from-gray-900 to-black">

@@ -67,7 +67,9 @@ export function NavMenu() {
           variant="outline"
           size="icon"
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-black/70 backdrop-blur-md border border-cyan-500/50 text-cyan-500 hover:bg-cyan-950/30 hover:text-cyan-400"
+          // Replace bg-black with bg-gray-900
+          className="bg-gray-900/70 backdrop-blur-md border border-cyan-500/50 text-cyan-500 hover:bg-cyan-950/30 hover:text-cyan-400"
+          <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-md">
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>

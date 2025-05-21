@@ -39,7 +39,9 @@ export function ProjectCard({ project, index, isInView }: ProjectCardProps) {
       className="relative group"
       whileHover={{ scale: 1.02 }}
     >
-      <Card className="border-cyan-500/30 bg-black/50 backdrop-blur-sm overflow-hidden h-full relative">
+      // Replace bg-black with bg-gray-900
+      // Replace bg-black with bg-gray-900
+      <Card className="border-cyan-500/30 bg-gray-900/50 backdrop-blur-sm overflow-hidden h-full relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5"></div>
 

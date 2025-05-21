@@ -169,7 +169,8 @@ export function CertificationsSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.4, delay: 0.1 * index }}
-              className="bg-black/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-cyan-400/50 relative group cyberpunk-card-glow perspective-1000"
+              // Replace bg-black with bg-gray-900
+              className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-cyan-400/50 relative group cyberpunk-card-glow perspective-1000"
               whileHover={{
                 scale: 1.03,
                 y: -5,

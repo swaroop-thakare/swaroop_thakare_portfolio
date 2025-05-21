@@ -118,7 +118,9 @@ export function AboutSection() {
             whileHover={{ scale: 1.02 }}
             className="perspective-1000"
           >
-            <Card className="border-purple-500/30 bg-black/70 backdrop-blur-sm overflow-hidden relative group transform transition-all duration-500 hover:rotate-y-3 hover:rotate-x-3 shadow-lg">
+            // Replace bg-black/70 with bg-gray-900/50
+            <div className="relative overflow-hidden rounded-lg border border-cyan-500/30 bg-gray-900/50 backdrop-blur-sm shadow-lg">
+            <Card className="border-purple-500/30 bg-gray-900/50 backdrop-blur-sm overflow-hidden relative group transform transition-all duration-500 hover:rotate-y-3 hover:rotate-x-3 shadow-lg">
               {/* Animated gradient border */}
               <div className="absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-purple-500/0 via-purple-500/50 to-cyan-500/0 opacity-0 group-hover:opacity-100 animate-gradient-x"></div>
 
