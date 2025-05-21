@@ -203,7 +203,8 @@ export function ContactSection() {
                       onChange={handleChange}
                       placeholder="Enter your email"
                       required
-                      className="bg-black/50 border-purple-500/30 text-gray-300 placeholder:text-gray-500 focus:border-purple-400 focus:ring-purple-400/30 cyberpunk-input"
+                      // Replace the current background class with:
+                      className="relative bg-gray-900/50 before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-500/10 before:to-cyan-500/5 before:backdrop-blur-sm border-purple-500/30 text-gray-300 placeholder:text-gray-500 focus:border-purple-400 focus:ring-purple-400/30 cyberpunk-input"
                     />
                   </div>
 
