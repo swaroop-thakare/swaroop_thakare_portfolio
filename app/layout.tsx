@@ -56,9 +56,9 @@ export default function RootLayout({
           </svg>
 
           {/* Enhanced background with subtle grid */}
-          <div className="fixed inset-0 bg-black bg-opacity-95 z-[-2]"></div>
-          <div className="fixed inset-0 bg-grid-pattern opacity-5 z-[-1] pointer-events-none"></div>
-          <div className="fixed inset-0 cyber-grid opacity-10 z-[-1] pointer-events-none"></div>
+          <div className="fixed inset-0 bg-gray-900 bg-opacity-80 z-[-2]"></div>
+          <div className="fixed inset-0 bg-grid-pattern opacity-10 z-[-1] pointer-events-none"></div>
+          <div className="fixed inset-0 cyber-grid opacity-15 z-[-1] pointer-events-none"></div>
 
           {children}
         </ThemeProvider>
