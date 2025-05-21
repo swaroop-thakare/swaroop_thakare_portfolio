@@ -170,21 +170,17 @@ export function SkillsSection() {
             >
               <div className="relative rounded-lg border border-cyan-500/30 bg-black/50 backdrop-blur-sm overflow-hidden h-full">
                 <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-                <div className={`absolute inset-0 bg-gradient-to-br from-${category.color}-500/10 to-black/10`}></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-black/10"></div>
 
                 {/* Tech grid background */}
                 <div className="absolute inset-0 tech-grid opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
 
                 <div className="relative p-6 z-10">
                   <div className="flex items-center gap-3 mb-6">
-                    <div
-                      className={`flex-shrink-0 w-10 h-10 rounded-md bg-${category.color}-900/30 flex items-center justify-center border border-${category.color}-500/30`}
-                    >
-                      <div className={`text-${category.color}-400`}>{category.icon}</div>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-md bg-cyan-900/30 flex items-center justify-center border border-cyan-500/30">
+                      <div className="text-cyan-400">{category.icon}</div>
                     </div>
-                    <h3
-                      className={`text-xl font-bold text-${category.color}-400 group-hover:text-${category.color}-300 transition-colors`}
-                    >
+                    <h3 className="text-xl font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">
                       {category.category}
                     </h3>
                   </div>
@@ -211,37 +207,11 @@ export function SkillsSection() {
                         </div>
                         <div className="h-2 bg-gray-900 rounded-full overflow-hidden relative">
                           <motion.div
-                            className={`absolute top-0 left-0 h-full bg-gradient-to-r from-${category.color}-600 to-${category.color}-400 rounded-full`}
+                            className="absolute top-0 left-0 h-full bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-full"
                             initial={{ width: 0 }}
                             animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
                             transition={{ duration: 1, delay: 0.6 + index * 0.1 + skillIndex * 0.1 }}
                           ></motion.div>
-
-                          {/* Digital data flow effect */}
-                          <motion.div
-                            className={`absolute top-0 left-0 h-full w-full`}
-                            style={{
-                              background: `repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(0, 255, 255, 0.1) 5px, rgba(0, 255, 255, 0.1) 10px)`,
-                              width: `${skill.level}%`,
-                            }}
-                            animate={{
-                              x: ["-100%", "0%"],
-                            }}
-                            transition={{
-                              repeat: Number.POSITIVE_INFINITY,
-                              duration: 3,
-                              ease: "linear",
-                            }}
-                          ></motion.div>
-
-                          {/* Animated pulse effect */}
-                          <div
-                            className={`absolute top-0 left-0 h-full bg-${category.color}-400 rounded-full animate-pulse opacity-30`}
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-
-                          {/* Circuit pattern overlay */}
-                          <div className="absolute inset-0 circuit-overlay opacity-30"></div>
                         </div>
                       </motion.div>
                     ))}
@@ -260,9 +230,7 @@ export function SkillsSection() {
                 </div>
 
                 {/* Glowing border effect on hover */}
-                <div
-                  className={`absolute inset-0 border border-${category.color}-500/0 rounded-lg transition-all duration-300 group-hover:border-${category.color}-500/50 group-hover:shadow-glow-${category.color}`}
-                ></div>
+                <div className="absolute inset-0 border border-cyan-500/0 rounded-lg transition-all duration-300 group-hover:border-cyan-500/50 group-hover:shadow-lg group-hover:shadow-cyan-500/20"></div>
               </div>
             </motion.div>
           ))}
