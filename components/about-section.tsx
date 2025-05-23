@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Code, Database, Globe, Zap, Cloud, Terminal, Cpu } from "lucide-react"
+import { Database, Globe, Cloud, Terminal, Cpu, Server, Briefcase, BarChart } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
@@ -118,9 +118,7 @@ export function AboutSection() {
             whileHover={{ scale: 1.02 }}
             className="perspective-1000"
           >
-            // Replace bg-black/70 with bg-gray-900/50
-            <div className="relative overflow-hidden rounded-lg border border-cyan-500/30 bg-gray-900/50 backdrop-blur-sm shadow-lg">
-            <Card className="border-purple-500/30 bg-gray-900/50 backdrop-blur-sm overflow-hidden relative group transform transition-all duration-500 hover:rotate-y-3 hover:rotate-x-3 shadow-lg">
+            <Card className="border-purple-500/30 bg-black/70 backdrop-blur-sm overflow-hidden relative group transform transition-all duration-500 hover:rotate-y-3 hover:rotate-x-3 shadow-lg">
               {/* Animated gradient border */}
               <div className="absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-purple-500/0 via-purple-500/50 to-cyan-500/0 opacity-0 group-hover:opacity-100 animate-gradient-x"></div>
 
@@ -177,13 +175,14 @@ export function AboutSection() {
                   </motion.div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 mb-4">
                   {[
-                    { name: "Full-Stack Dev", icon: <Code className="h-4 w-4" />, color: "cyan" },
-                    { name: "Cloud Computing", icon: <Cloud className="h-4 w-4" />, color: "purple" },
-                    { name: "Database Management", icon: <Database className="h-4 w-4" />, color: "cyan" },
-                    { name: "AI/ML & Data Science", icon: <Zap className="h-4 w-4" />, color: "purple" },
-                    { name: "Project Management", icon: <Globe className="h-4 w-4" />, color: "cyan" },
+                    { name: "Programming", icon: <Terminal className="h-4 w-4" />, color: "cyan" },
+                    { name: "Web Development", icon: <Globe className="h-4 w-4" />, color: "purple" },
+                    { name: "Databases", icon: <Database className="h-4 w-4" />, color: "cyan" },
+                    { name: "Cloud & DevOps", icon: <Cloud className="h-4 w-4" />, color: "purple" },
+                    { name: "Project Management", icon: <Briefcase className="h-4 w-4" />, color: "cyan" },
+                    { name: "AI/ML", icon: <BarChart className="h-4 w-4" />, color: "purple" },
                   ].map((tech, index) => (
                     <motion.div
                       key={tech.name}
@@ -198,7 +197,7 @@ export function AboutSection() {
                       }}
                     >
                       <div
-                        className={`flex-shrink-0 w-8 h-8 rounded-md bg-gradient-to-br from-${tech.color}-900/50 to-${tech.color}-700/30 flex items-center justify-center border border-${tech.color}-500/30 group-hover/tech:border-${tech.color}-400/50 transition-all duration-300 shadow-glow-${tech.color}-xs`}
+                        className={`flex-shrink-0 w-7 h-7 rounded-md bg-gradient-to-br from-${tech.color}-900/50 to-${tech.color}-700/30 flex items-center justify-center border border-${tech.color}-500/30 group-hover/tech:border-${tech.color}-400/50 transition-all duration-300 shadow-glow-${tech.color}-xs`}
                       >
                         <div
                           className={`text-${tech.color}-400 group-hover/tech:text-${tech.color}-300 transition-colors`}
@@ -206,80 +205,201 @@ export function AboutSection() {
                           {tech.icon}
                         </div>
                       </div>
-                      <span className="text-gray-300 group-hover/tech:text-cyan-300 transition-colors">
+                      <span className="text-gray-300 group-hover/tech:text-cyan-300 transition-colors text-sm">
                         {tech.name}
                       </span>
                     </motion.div>
                   ))}
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-purple-900/30">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center gap-2">
-                    <Code className="h-3.5 w-3.5" /> Programming & Web
-                  </h4>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {[
-                      "Python",
-                      "C++",
-                      "JavaScript",
-                      "TypeScript",
-                      "React",
-                      "Next.js",
-                      "Node.js",
-                      "Express",
-                      "Redux",
-                      "Tailwind",
-                      "GraphQL",
-                    ].map((skill, index) => (
-                      <motion.span
-                        key={skill}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                        transition={{ duration: 0.3, delay: 0.8 + index * 0.05 }}
-                        className="inline-block px-2 py-1 rounded-md text-xs bg-gradient-to-br from-cyan-950/30 to-cyan-900/20 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-900/30 hover:border-cyan-400/50 hover:text-cyan-300 transition-all duration-300 cursor-default shadow-glow-cyan-xs"
-                        whileHover={{
-                          scale: 1.05,
-                          boxShadow: "0 0 8px rgba(0, 255, 255, 0.5)",
-                          transition: { duration: 0.2 },
-                        }}
-                      >
-                        {skill}
-                      </motion.span>
-                    ))}
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center gap-2">
+                      <Terminal className="h-3.5 w-3.5" /> Programming
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {["Python (Advanced)", "C++"].map((skill, index) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                          transition={{ duration: 0.3, delay: 0.8 + index * 0.05 }}
+                          className="inline-block px-2 py-0.5 rounded-md text-xs bg-gradient-to-br from-cyan-950/30 to-cyan-900/20 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-900/30 hover:border-cyan-400/50 hover:text-cyan-300 transition-all duration-300 cursor-default shadow-glow-cyan-xs"
+                          whileHover={{
+                            scale: 1.05,
+                            boxShadow: "0 0 8px rgba(0, 255, 255, 0.5)",
+                            transition: { duration: 0.2 },
+                          }}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
                   </div>
 
-                  <h4 className="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2">
-                    <Database className="h-3.5 w-3.5" /> Data & Cloud
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "MongoDB",
-                      "MySQL",
-                      "SQL",
-                      "AWS",
-                      "Docker",
-                      "Pandas",
-                      "NumPy",
-                      "Tableau",
-                      "Power BI",
-                      "Scikit-learn",
-                      "NLP",
-                    ].map((skill, index) => (
-                      <motion.span
-                        key={skill}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                        transition={{ duration: 0.3, delay: 1.0 + index * 0.05 }}
-                        className="inline-block px-2 py-1 rounded-md text-xs bg-gradient-to-br from-purple-950/30 to-purple-900/20 border border-purple-500/30 text-purple-400 hover:bg-purple-900/30 hover:border-purple-400/50 hover:text-purple-300 transition-all duration-300 cursor-default shadow-glow-purple-xs"
-                        whileHover={{
-                          scale: 1.05,
-                          boxShadow: "0 0 8px rgba(128, 0, 255, 0.5)",
-                          transition: { duration: 0.2 },
-                        }}
-                      >
-                        {skill}
-                      </motion.span>
-                    ))}
+                  <div>
+                    <h4 className="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2">
+                      <Globe className="h-3.5 w-3.5" /> Web Development
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {[
+                        "HTML5",
+                        "CSS3",
+                        "JavaScript",
+                        "TypeScript",
+                        "PHP",
+                        "React.js",
+                        "Next.js",
+                        "Redux",
+                        "Tailwind",
+                        "Bootstrap",
+                        "Node.js",
+                        "Express.js",
+                        "RESTful APIs",
+                        "GraphQL",
+                      ].map((skill, index) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                          transition={{ duration: 0.3, delay: 0.8 + index * 0.03 }}
+                          className="inline-block px-2 py-0.5 rounded-md text-xs bg-gradient-to-br from-purple-950/30 to-purple-900/20 border border-purple-500/30 text-purple-400 hover:bg-purple-900/30 hover:border-purple-400/50 hover:text-purple-300 transition-all duration-300 cursor-default shadow-glow-purple-xs"
+                          whileHover={{
+                            scale: 1.05,
+                            boxShadow: "0 0 8px rgba(128, 0, 255, 0.5)",
+                            transition: { duration: 0.2 },
+                          }}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center gap-2">
+                      <Database className="h-3.5 w-3.5" /> Databases
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {["MongoDB", "Firebase", "MySQL", "SQL", "PL/SQL", "Data Modelling"].map((skill, index) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                          transition={{ duration: 0.3, delay: 0.9 + index * 0.05 }}
+                          className="inline-block px-2 py-0.5 rounded-md text-xs bg-gradient-to-br from-cyan-950/30 to-cyan-900/20 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-900/30 hover:border-cyan-400/50 hover:text-cyan-300 transition-all duration-300 cursor-default shadow-glow-cyan-xs"
+                          whileHover={{
+                            scale: 1.05,
+                            boxShadow: "0 0 8px rgba(0, 255, 255, 0.5)",
+                            transition: { duration: 0.2 },
+                          }}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2">
+                      <Cloud className="h-3.5 w-3.5" /> Cloud & DevOps
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {["AWS Cloud Foundations", "AWS Data Engineering", "Docker"].map((skill, index) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                          transition={{ duration: 0.3, delay: 1.0 + index * 0.05 }}
+                          className="inline-block px-2 py-0.5 rounded-md text-xs bg-gradient-to-br from-purple-950/30 to-purple-900/20 border border-purple-500/30 text-purple-400 hover:bg-purple-900/30 hover:border-purple-400/50 hover:text-purple-300 transition-all duration-300 cursor-default shadow-glow-purple-xs"
+                          whileHover={{
+                            scale: 1.05,
+                            boxShadow: "0 0 8px rgba(128, 0, 255, 0.5)",
+                            transition: { duration: 0.2 },
+                          }}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center gap-2">
+                      <Briefcase className="h-3.5 w-3.5" /> Project Management
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {["Agile/Scrum", "Jira (Advanced)", "Confluence", "Slack", "Project Boards"].map(
+                        (skill, index) => (
+                          <motion.span
+                            key={skill}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                            transition={{ duration: 0.3, delay: 1.1 + index * 0.05 }}
+                            className="inline-block px-2 py-0.5 rounded-md text-xs bg-gradient-to-br from-cyan-950/30 to-cyan-900/20 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-900/30 hover:border-cyan-400/50 hover:text-cyan-300 transition-all duration-300 cursor-default shadow-glow-cyan-xs"
+                            whileHover={{
+                              scale: 1.05,
+                              boxShadow: "0 0 8px rgba(0, 255, 255, 0.5)",
+                              transition: { duration: 0.2 },
+                            }}
+                          >
+                            {skill}
+                          </motion.span>
+                        ),
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-purple-400 mb-2 flex items-center gap-2">
+                      <BarChart className="h-3.5 w-3.5" /> AI/ML
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {["Scikit-learn", "NLP", "Supervised Learning", "Model Evaluation", "A/B Testing"].map(
+                        (skill, index) => (
+                          <motion.span
+                            key={skill}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                            transition={{ duration: 0.3, delay: 1.2 + index * 0.05 }}
+                            className="inline-block px-2 py-0.5 rounded-md text-xs bg-gradient-to-br from-purple-950/30 to-purple-900/20 border border-purple-500/30 text-purple-400 hover:bg-purple-900/30 hover:border-purple-400/50 hover:text-purple-300 transition-all duration-300 cursor-default shadow-glow-purple-xs"
+                            whileHover={{
+                              scale: 1.05,
+                              boxShadow: "0 0 8px rgba(128, 0, 255, 0.5)",
+                              transition: { duration: 0.2 },
+                            }}
+                          >
+                            {skill}
+                          </motion.span>
+                        ),
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center gap-2">
+                      <Server className="h-3.5 w-3.5" /> Soft Skills
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {["Team Collaboration", "Communication", "Problem-Solving", "Ownership", "Adaptability"].map(
+                        (skill, index) => (
+                          <motion.span
+                            key={skill}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                            transition={{ duration: 0.3, delay: 1.3 + index * 0.05 }}
+                            className="inline-block px-2 py-0.5 rounded-md text-xs bg-gradient-to-br from-cyan-950/30 to-cyan-900/20 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-900/30 hover:border-cyan-400/50 hover:text-cyan-300 transition-all duration-300 cursor-default shadow-glow-cyan-xs"
+                            whileHover={{
+                              scale: 1.05,
+                              boxShadow: "0 0 8px rgba(0, 255, 255, 0.5)",
+                              transition: { duration: 0.2 },
+                            }}
+                          >
+                            {skill}
+                          </motion.span>
+                        ),
+                      )}
+                    </div>
                   </div>
                 </div>
               </CardContent>
