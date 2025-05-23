@@ -65,27 +65,40 @@ export function ContactSection() {
     } catch (error) {
       setIsSubmitting(false)
       console.error("Error submitting form:", error)
-      // You could add error state handling here
       alert("Failed to send message. Please try again later.")
     }
   }
 
-  // Update the socialLinks array with all contact information
+  // Contact information
   const socialLinks = [
     {
       name: "LinkedIn",
       icon: <Linkedin className="h-5 w-5" />,
       url: "https://www.linkedin.com/in/swaroop-thakare-136484259/",
     },
-    { name: "GitHub", icon: <Github className="h-5 w-5" />, url: "https://github.com/swaroop-thakare" },
+    {
+      name: "GitHub",
+      icon: <Github className="h-5 w-5" />,
+      url: "https://github.com/swaroop-thakare",
+    },
     {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
       url: "mailto:swaroopthakare@gmail.com",
       label: "swaroopthakare@gmail.com",
     },
-    { name: "Phone", icon: <Phone className="h-5 w-5" />, url: "tel:+919561060731", label: "+91 9561060731" },
-    { name: "Location", icon: <MapPin className="h-5 w-5" />, url: "#", label: "Pune, India" },
+    {
+      name: "Phone",
+      icon: <Phone className="h-5 w-5" />,
+      url: "tel:+919561060731",
+      label: "+91 9561060731",
+    },
+    {
+      name: "Location",
+      icon: <MapPin className="h-5 w-5" />,
+      url: "#",
+      label: "Pune, India",
+    },
   ]
 
   return (
@@ -130,8 +143,8 @@ export function ContactSection() {
                 </div>
 
                 <p className="text-gray-300 mb-6">
-                  Feel free to reach out for collaborations, opportunities, or just to say hello. I'll get back to you
-                  as soon as possible.
+                  Feel free to reach out for collaborations, opportunities, or just to say hello. I&apos;ll get back to
+                  you as soon as possible.
                 </p>
 
                 <div className="space-y-4 mb-6">
@@ -251,7 +264,7 @@ export function ContactSection() {
                       animate={{ opacity: 1, y: 0 }}
                       className="p-3 rounded-md bg-green-950/30 border border-green-500/30 text-green-400 text-sm"
                     >
-                      Message sent successfully! I'll get back to you soon.
+                      Message sent successfully! I&apos;ll get back to you soon.
                     </motion.div>
                   )}
                 </form>
