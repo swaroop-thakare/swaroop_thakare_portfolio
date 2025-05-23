@@ -117,13 +117,7 @@ export function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            // Replace bg-black with bg-gray-900
-            <Card className="border-cyan-500/30 bg-gray-900/50 backdrop-blur-sm overflow-hidden h-full relative group hover:border-cyan-400/50 hover:shadow-glow-sm transition-all duration-300">
-            className="flex items-center gap-3 p-3 rounded-md border border-cyan-500/30 bg-gray-900/30 text-gray-300 hover:bg-cyan-950/30 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 group/link cyberpunk-card"
-            <Card className="border-purple-500/30 bg-gray-900/50 backdrop-blur-sm overflow-hidden h-full relative group hover:border-purple-400/50 hover:shadow-glow-purple transition-all duration-300">
-            className="bg-gray-900/50 border-purple-500/30 text-gray-300 placeholder:text-gray-500 focus:border-purple-400 focus:ring-purple-400/30 cyberpunk-input"
-            className="bg-gray-900/50 border-purple-500/30 text-gray-300 placeholder:text-gray-500 focus:border-purple-400 focus:ring-purple-400/30 cyberpunk-input"
-            className="bg-gray-900/50 border-purple-500/30 text-gray-300 placeholder:text-gray-500 focus:border-purple-400 focus:ring-purple-400/30 cyberpunk-input"
+            <Card className="border-cyan-500/30 bg-black/50 backdrop-blur-sm overflow-hidden h-full relative group hover:border-cyan-400/50 hover:shadow-glow-sm transition-all duration-300">
               <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/10"></div>
 
@@ -203,8 +197,7 @@ export function ContactSection() {
                       onChange={handleChange}
                       placeholder="Enter your email"
                       required
-                      // Replace the current background class with:
-                      className="relative bg-gray-900/50 before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-500/10 before:to-cyan-500/5 before:backdrop-blur-sm border-purple-500/30 text-gray-300 placeholder:text-gray-500 focus:border-purple-400 focus:ring-purple-400/30 cyberpunk-input"
+                      className="bg-black/50 border-purple-500/30 text-gray-300 placeholder:text-gray-500 focus:border-purple-400 focus:ring-purple-400/30 cyberpunk-input"
                     />
                   </div>
 

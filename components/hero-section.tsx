@@ -80,10 +80,7 @@ export function HeroSection() {
                   transition={{ delay: 0.5, duration: 0.5 }}
                   className="flex flex-wrap gap-4"
                 >
-                  <Button 
-                    className="bg-cyan-500 hover:bg-cyan-600 text-black font-medium px-6 py-2 rounded-md shadow-glow relative overflow-hidden group"
-                    onClick={() => window.location.href = '#projects'}
-                  >
+                  <Button className="bg-cyan-500 hover:bg-cyan-600 text-black font-medium px-6 py-2 rounded-md shadow-glow relative overflow-hidden group">
                     <span className="relative z-10 flex items-center gap-2">
                       View Projects <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </span>
@@ -93,7 +90,6 @@ export function HeroSection() {
                   <Button
                     variant="outline"
                     className="border-cyan-500 text-cyan-500 hover:bg-cyan-950/30 font-medium px-6 py-2 rounded-md relative overflow-hidden group"
-                    onClick={() => window.location.href = '#contact'}
                   >
                     <span className="relative z-10 flex items-center gap-2">Contact Me</span>
                     <motion.span
@@ -106,17 +102,18 @@ export function HeroSection() {
 
                   <Button
                     variant="ghost"
-                    // Replace bg-black with bg-gray-900
-                    className="relative group px-6 py-2 overflow-hidden border border-purple-500/50 bg-gray-900/30 hover:bg-purple-950/20"
-                    onClick={() => window.open('/aiml.pdf', '_blank')}
+                    className="relative group px-6 py-2 overflow-hidden border border-purple-500/50 bg-black/30 hover:bg-purple-950/20"
+                    asChild
                   >
-                    <span className="relative z-10 flex items-center gap-2 text-purple-400 group-hover:text-purple-300">
-                      <FileText className="h-4 w-4" />
-                      Resume
-                      <Download className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-1 group-hover:translate-y-0" />
-                    </span>
-                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-cyan-500"></span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <a href="/swaroop_thakare.pdf" download="Swaroop_Thakare_Resume.pdf">
+                      <span className="relative z-10 flex items-center gap-2 text-purple-400 group-hover:text-purple-300">
+                        <FileText className="h-4 w-4" />
+                        Resume
+                        <Download className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-1 group-hover:translate-y-0" />
+                      </span>
+                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-cyan-500"></span>
+                      <span className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    </a>
                   </Button>
                 </motion.div>
 

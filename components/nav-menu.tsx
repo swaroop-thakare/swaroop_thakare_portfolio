@@ -10,13 +10,11 @@ export function NavMenu() {
   const [activeSection, setActiveSection] = useState("home")
   const [scrolled, setScrolled] = useState(false)
 
-  // Handle scroll to update active section and navbar background
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "skills", "projects", "experience", "education", "certifications", "contact"]
       const scrollPosition = window.scrollY + 100
 
-      // Update scrolled state for navbar background
       setScrolled(window.scrollY > 50)
 
       for (const section of sections) {
@@ -67,9 +65,7 @@ export function NavMenu() {
           variant="outline"
           size="icon"
           onClick={() => setIsOpen(!isOpen)}
-          // Replace bg-black with bg-gray-900
-          className="bg-gray-900/70 backdrop-blur-md border border-cyan-500/50 text-cyan-500 hover:bg-cyan-950/30 hover:text-cyan-400"
-          <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-md">
+          className="bg-black/70 backdrop-blur-md border border-cyan-500/50 text-cyan-500 hover:bg-cyan-950/30 hover:text-cyan-400"
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
