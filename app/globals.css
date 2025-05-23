@@ -55,6 +55,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+      radial-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 25px 25px;
+    background-position: 0 0, 0 0, 12.5px 12.5px;
   }
 }
 
@@ -553,6 +559,21 @@
 
 .cyberpunk-card:hover::before {
   left: 100%;
+}
+
+.card-texture {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 50px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 50px);
+  pointer-events: none;
 }
 
 /* Cyberpunk Text */
